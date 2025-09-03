@@ -2,7 +2,7 @@
 
 ## 📖 Description
 **Thesis Title:**  
-Analysis of spatial reasoning capabilities of LLMs in 2D vertical interactive grid-based environments via in-context learning: the case of Space Invaders*  
+*Analysis of spatial reasoning capabilities of LLMs in 2D vertical interactive grid-based environments via in-context learning: the case of Space Invaders*  
 
 **Context:**  
 This thesis investigates the ability of Large Language Models (LLMs) to **reason in dynamic environments** that require not only accurate **spatial interpretation**, but also strong **context adaptation**.  
@@ -17,7 +17,9 @@ The main aim is to evaluate how **in-context learning**, supported by tailored *
 
 
 ## 🎮 Demo
-(insert video of llm playing)
+<p align="center">
+  <img src="space_invaders_llm/results/llm_playing.gif" alt="Gameplay Demo" width="500"/>
+</p>
 
 
 ---
@@ -37,13 +39,17 @@ Finally, the work provides a **critical discussion** of the current limitations 
 ## 🧩 Main Challenges & Solutions
 1. **Encoding the game state for the models**  
    🔹 *Challenge:* defining how to represent a dynamic game state.  
-   🔹 *Solution:* adoption of a **2D grid/matrix representation**, updated after every interaction.  
+   🔹 *Solution:* adoption of a **2D grid/matrix representation**, updated after every interaction.
 
-2. **Model interaction**  
+   <p align="center">
+      <img src="space_invaders_llm/results/architettura.png" alt="Project architecture" width="400"/>
+   </p>
+
+3. **Model interaction**  
    🔹 *Challenge:* ensuring coherent communication with LLMs.  
    🔹 *Solution:* implementation of a **client-server architecture** using **chat templates** to structure prompts.  
 
-3. **Game map representation**  
+4. **Game map representation**  
    🔹 *Challenge:* determining the most effective representation for model understanding.  
    🔹 *Solution:* experiments with different input formats:  
    - Direct matrix  
@@ -72,7 +78,49 @@ To execute the project:
 ---
 
 
-## 📊 Results & Conclusions  
+## 📊 Results per Model  
+
+### 🦙 LLaMA  
+<p align="center">
+  <img src="space_invaders_llm/results/llama1b.png" alt="LLaMA 1B Performance" width="300" height="200"/>
+  <img src="space_invaders_llm/results/llama3b.png" alt="LLaMA 3B Performance" width="300" height="200"/>
+</p>
+
+### 🐘 Phi  
+<p align="center">
+  <img src="space_invaders_llm/results/phi1.5b.png" alt="Phi 1.5B Performance" width="300" height="200"/>
+  <img src="space_invaders_llm/results/phi3b.png" alt="Phi 3B Performance" width="300" height="200"/>
+</p>
+
+### 🐦 Qwen  
+<p align="center">
+  <img src="space_invaders_llm/results/qwen06b.png" alt="Qwen 0.6B Performance" width="300" height="200"/>
+  <img src="space_invaders_llm/results/qwen1.7b.png" alt="Qwen 1.7B Performance" width="300" height="200"/>
+  <img src="space_invaders_llm/results/qwen3b.png" alt="Qwen 3B Performance" width="300" height="200"/>
+</p>
+
+
+---
+
+
+## 📊 Comparative Results  
+
+<p align="center">
+  <img src="space_invaders_llm/results/paragonePunti.png" alt="General overview" width="300" style="margin-right: 15px;"/>
+  <img src="space_invaders_llm/results/paragoneDifficolta.png" alt="Impact of Game Difficulty" width="300" style="margin-right: 15px;"/>
+  <img src="space_invaders_llm/results/paragonePuntiTot.png" alt="Overall model overview" width="300"/>
+</p>
+
+**Description:**  
+- **Left:**Comparison using average points
+- **Center:** Effect of increasing game difficulty on reasoning ability  
+- **Right:** Overall models overview based off points
+
+
+---
+
+
+## 📊 Conclusions
 
 The thesis analyzed the **spatial reasoning capabilities of Large Language Models (LLMs)** in dynamic 2D environments through **in-context learning** and **prompt engineering**.  
 
@@ -84,23 +132,6 @@ Key observations from the experiments:
 - Overall, results confirm that while LLMs are not explicitly trained for logical reasoning in spatial tasks, they can **adapt to novel environments if guided with effective prompts**.  
 
 This highlights the potential of LLMs to exhibit useful behaviors in **dynamic and interactive environments**, even without explicit spatial representations.  
-
-
----
-
-
-## 📉 Visualization of Results  
-
-<p align="center">
-  <img src="assets/histogram_small_vs_large.png" alt="Performance: Small vs Large Models" width="280"/>
-  <img src="assets/histogram_difficulty.png" alt="Impact of Game Difficulty" width="280"/>
-  <img src="assets/histogram_strategies.png" alt="Effect of Prompting Strategies" width="280"/>
-</p>  
-
-Each histogram represents:  
-- **Left:** Performance comparison between small and large LLMs  
-- **Center:** Effect of increasing game difficulty on reasoning ability  
-- **Right:** Improvement obtained using structured prompting strategies  
 
 
 ---
