@@ -116,7 +116,7 @@ To execute the project:
 </p>
 
 **Description:**  
-- **Left:**Comparison using average points
+- **Left:** Comparison using average points
 - **Center:** Effect of increasing game difficulty on reasoning ability  
 - **Right:** Overall models overview based off points
 
