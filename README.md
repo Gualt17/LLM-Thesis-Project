@@ -42,14 +42,18 @@ Finally, the work provides a **critical discussion** of the current limitations 
    🔹 *Solution:* adoption of a **2D grid/matrix representation**, updated after every interaction.
 
    <p align="center">
-      <img src="space_invaders_llm/results/architettura.png" alt="Project architecture" width="400"/>
+      <img src="space_invaders_llm/results/gameTOmatrix.png" alt="Project architecture" width="400"/>
    </p>
 
 3. **Model interaction**  
    🔹 *Challenge:* ensuring coherent communication with LLMs.  
-   🔹 *Solution:* implementation of a **client-server architecture** using **chat templates** to structure prompts.  
+   🔹 *Solution:* implementation of a **client-server architecture** using **chat templates** to structure prompts.
 
-4. **Game map representation**  
+   <p align="center">
+      <img src="space_invaders_llm/results/Architettura.png" alt="Project architecture" width="400"/>
+   </p>
+
+5. **Game map representation**  
    🔹 *Challenge:* determining the most effective representation for model understanding.  
    🔹 *Solution:* experiments with different input formats:  
    - Direct matrix  
